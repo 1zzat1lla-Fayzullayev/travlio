@@ -37,10 +37,10 @@ function Header() {
   };
 
   return (
-    <div className="relative min-h-screen lg:h-auto 2xl:h-auto bg-cover bg-center bg-no-repeat header-bg flex justify-center items-center">
+    <div className="relative min-h-screen lg:h-auto 2xl:h-auto bg-cover bg-center bg-no-repeat header-bg flex justify-center items-center z-[90]">
       <div className="absolute inset-0 bg-[#0F1F44] opacity-60"></div>
       <Wrapper>
-        <div className="relative flex flex-col items-center justify-center h-full ">
+        <div className="relative flex flex-col items-center justify-center h-full pt-[100px] ">
           <h1 className="text-white text-[25px] md:text-[30px] lg:text-[50px] font-semibold text-center">
             Ready to start your exciting journey.
           </h1>

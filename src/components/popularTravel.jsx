@@ -31,7 +31,7 @@ const TravelCard = ({
           alt={title}
         />
       </div>
-      <div className="bg-white shadow-xl mx-auto absolute left-0 right-0 bottom-[-50px] rounded-[5px] p-5 max-w-[350px] w-full transition-all ease-in transform">
+      <div className="bg-white shadow-xl mx-auto absolute left-0 right-0 bottom-[-50px] rounded-[5px] p-2 md:p-5 max-w-[350px] w-full transition-all ease-in transform">
         {foiz && <div className="tour_info_price_discount">{foiz}</div>}
         <div className="flex items-center gap-2">
           {renderStars()}
@@ -121,8 +121,8 @@ function PopularTravel() {
     <>
       <Wrapper>
         <div className="text-center mb-8 relative mt-[100px]">
-          <p className=" text-[#2C3F58] lora text-[20px]">Popular Travel Packages</p>
-          <h2 className="text-[50px] font-bold text-[#2C3F58]">Top Cities for Travel</h2>
+          <p className=" text-[#2C3F58] lora text-[17px] md:text-[20px]">Popular Travel Packages</p>
+          <h2 className="text-[25px] md:text-[30px] lg:text-[50px] font-bold text-[#2C3F58]">Top Cities for Travel</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {travelData.map((item, index) => (

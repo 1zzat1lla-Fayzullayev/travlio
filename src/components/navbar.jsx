@@ -23,7 +23,7 @@ function Navbar() {
   const staticLinks = ["Blog", "About", "Contact", "Error"];
 
   return (
-    <nav className="fixed top-0 left-0 w-full py-4 bg-white z-50 shadow-md">
+    <nav className="fixed top-0 left-0 w-full py-4 bg-white z-[99] shadow-md">
       <Wrapper>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-16">
@@ -96,7 +96,7 @@ function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed inset-0 bg-[#000000b6] bg-opacity-40 z-50 transition-opacity duration-300 ease-in-out ${
+          className={`fixed inset-0 bg-[#000000b6] bg-opacity-40 z-[99] transition-opacity duration-300 ease-in-out ${
             isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
           onClick={toggleMobileMenu}
