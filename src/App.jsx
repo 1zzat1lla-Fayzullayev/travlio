@@ -1,6 +1,9 @@
 import Header from "./components/header";
 import InfoCard from "./components/infoCard";
 import Navbar from "./components/navbar";
+import PopularTravel from "./components/popularTravel";
+import 'font-awesome/css/font-awesome.min.css';
+
 
 function App() {
   return (
@@ -8,6 +11,7 @@ function App() {
       <Navbar />
       <Header />
       <InfoCard />
+      <PopularTravel />
     </>
   );
 }

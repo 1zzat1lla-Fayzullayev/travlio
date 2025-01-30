@@ -200,7 +200,7 @@ function Header() {
                 minDate={new Date()}
               />
 
-              <div className="flex justify-between flex-col gap-3 lg:flex-row gap-0 items-center mt-4 mx-[25px]">
+              <div className="flex justify-between flex-col gap-3 lg:flex-row lg:gap-0 items-center mt-4 mx-[25px]">
                 <div className="flex items-center gap-2">
                   <img src="/time.svg" alt="" className="w-5 h-5" />
                   <span className="text-gray-700 font-semibold">Start at</span>
