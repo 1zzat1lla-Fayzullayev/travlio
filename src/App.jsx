@@ -1,4 +1,5 @@
 import Header from "./components/header";
+import InfoCard from "./components/infoCard";
 import Navbar from "./components/navbar";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <Navbar />
       <Header />
+      <InfoCard />
     </>
   );
 }

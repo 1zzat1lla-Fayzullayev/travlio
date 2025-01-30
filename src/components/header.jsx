@@ -37,7 +37,7 @@ function Header() {
   };
 
   return (
-    <div className="relative h-[70vh] lg:h-screen 2xl:h-[70vh] bg-cover bg-center bg-no-repeat header-bg">
+    <div className="relative h-[80vh] lg:h-screen 2xl:h-[70vh] bg-cover bg-center bg-no-repeat header-bg">
       <div className="absolute inset-0 bg-[#0F1F44] opacity-60"></div>
       <Wrapper>
         <div className="relative flex flex-col items-center justify-center h-full pt-[200px] 2xl:pt-[350px]">
