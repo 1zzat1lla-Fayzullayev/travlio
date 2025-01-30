@@ -137,9 +137,9 @@
   font-family: "Lora", serif;
 }
 
-
-
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
   -webkit-transition: all 0.3s ease-in-out 0s;
   -o-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
@@ -160,6 +160,10 @@
   background: rgba(113, 149, 179, 0.2);
 }
 
-.user_card:hover .user_img{
+.user_card:hover .user_img {
   box-shadow: 0 0 0 8px rgba(255, 87, 34, 0.2);
+}
+
+.contact {
+  background-image: url("	http://demoapus-wp1.com/travlio/wp-content/uploads/2020/08/bg-new.png");
 }
