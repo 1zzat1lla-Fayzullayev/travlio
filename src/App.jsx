@@ -4,6 +4,7 @@ import Navbar from "./components/navbar";
 import PopularTravel from "./components/popularTravel";
 import 'font-awesome/css/font-awesome.min.css';
 import StylingPlaces from "./components/stylingPlaces";
+import TrandingEvent from "./components/trandingEvent";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <InfoCard />
       <PopularTravel />
       <StylingPlaces />
+      <TrandingEvent />
     </>
   );
 }
