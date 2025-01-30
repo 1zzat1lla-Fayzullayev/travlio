@@ -5,7 +5,7 @@ import Wrapper from "../layout/wrapper";
 function InfoCard() {
   return (
     <>
-      <div className="bg-[#F4F5F7] p-10 min-[375px]:mt-[200px] min-[320px]:mt-[350px] md:mt-0">
+      <div className="relative z-[-1] bg-[#F4F5F7] p-10 ">
         <Wrapper>
           <Swiper
             spaceBetween={20}

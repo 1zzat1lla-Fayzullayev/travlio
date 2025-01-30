@@ -37,10 +37,10 @@ function Header() {
   };
 
   return (
-    <div className="relative h-[80vh] lg:h-screen 2xl:h-[70vh] bg-cover bg-center bg-no-repeat header-bg">
+    <div className="relative min-h-screen lg:h-auto 2xl:h-auto bg-cover bg-center bg-no-repeat header-bg flex justify-center items-center">
       <div className="absolute inset-0 bg-[#0F1F44] opacity-60"></div>
       <Wrapper>
-        <div className="relative flex flex-col items-center justify-center h-full pt-[200px] 2xl:pt-[350px]">
+        <div className="relative flex flex-col items-center justify-center h-full ">
           <h1 className="text-white text-[25px] md:text-[30px] lg:text-[50px] font-semibold text-center">
             Ready to start your exciting journey.
           </h1>
@@ -49,7 +49,7 @@ function Header() {
             blanditiis praesentium
           </p>
 
-          <form className="mt-8 bg-white rounded-lg shadow-lg flex gap-4 items-center justify-between flex-col lg:flex-row w-full lg:w-auto">
+          <form className="relative mt-8 bg-white rounded-lg shadow-lg flex gap-4 items-center justify-between flex-col lg:flex-row w-full lg:w-auto">
             <div className="lg:border-r lg:border-r-[#e9edf5] lg:border-b-none border-b-[#e9edf5] p-6">
               <div className="flex items-center gap-2 rounded-lg p-2 w-full sm:w-auto">
                 <img src="/location.svg" className="w-[25px]" />
