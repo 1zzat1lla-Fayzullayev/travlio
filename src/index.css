@@ -160,4 +160,6 @@
   background: rgba(113, 149, 179, 0.2);
 }
 
-
+.user_card:hover .user_img{
+  box-shadow: 0 0 0 8px rgba(255, 87, 34, 0.2);
+}
