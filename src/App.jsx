@@ -3,6 +3,7 @@ import InfoCard from "./components/infoCard";
 import Navbar from "./components/navbar";
 import PopularTravel from "./components/popularTravel";
 import 'font-awesome/css/font-awesome.min.css';
+import StylingPlaces from "./components/stylingPlaces";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <InfoCard />
       <PopularTravel />
+      <StylingPlaces />
     </>
   );
 }

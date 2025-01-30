@@ -136,3 +136,28 @@
 .lora {
   font-family: "Lora", serif;
 }
+
+
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 8px;
+  border: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  text-align: center;
+  padding: 4px;
+  background: rgba(113, 149, 179, 0.2);
+}
+
+
