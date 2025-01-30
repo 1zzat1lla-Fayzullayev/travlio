@@ -49,7 +49,7 @@ function TrandingEvent() {
   return (
     <>
       <div className="text-center mb-8 relative mt-[100px]">
-        <p className=" text-[#2C3F58] lora text-[30px] md:text-[40px]">
+        <p className=" text-[#2C3F58] lora text-[14px] md:text-[20px]">
           Trending Event of the Week
         </p>
         <h2 className="text-[25px] md:text-[30px] lg:text-[50px] font-bold text-[#2C3F58]">
