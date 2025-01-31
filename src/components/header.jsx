@@ -68,7 +68,7 @@ function Header() {
 
                 <div
                   className={`absolute bg-white top-[100%] mt-2 left-0 p-2 w-full lg:max-w-[230px]  overflow-y-scroll h-[150px] ease-in transition-transform ${
-                    showLocation ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[100%]"
+                    showLocation ? "opacity-100 " : "opacity-0 "
                   }`}
                 >
                   <div className="p-3 border-b border-b-[#e9edf5] cursor-pointer hover:text-[#ff5722] transition-all ease-in">
