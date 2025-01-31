@@ -50,8 +50,8 @@ function Header() {
           </p>
 
           <form className="relative mt-8 bg-white rounded-lg shadow-lg flex gap-4 items-center justify-between flex-col lg:flex-row w-full lg:w-auto">
-            <div className="lg:border-r lg:border-r-[#e9edf5] lg:border-b-none border-b-[#e9edf5] p-6">
-              <div className="flex items-center gap-2 rounded-lg p-2 w-full sm:w-auto">
+            <div className="lg:border-r lg:border-r-[#e9edf5] p-6 border-b-[#e9edf5] border-b lg:border-b-0 w-full lg:w-auto">
+              <div className="flex items-center gap-2 rounded-lg lg:px-2 w-full sm:w-auto">
                 <img src="/location.svg" className="w-[25px]" />
                 <select className="bg-transparent focus:outline-none">
                   <option>All Destinations</option>
@@ -63,7 +63,7 @@ function Header() {
               </div>
             </div>
 
-            <div className="lg:border-r lg:border-r-[#e9edf5] lg:border-b-none border-b-[#e9edf5] p-6">
+            <div className="lg:border-r lg:border-r-[#e9edf5] border-b-[#e9edf5] border-b lg:border-b-0 p-6 w-full lg:w-auto">
               <div
                 className="flex items-center gap-2 rounded-lg w-full sm:w-auto cursor-pointer"
                 onClick={handleDateClick}
@@ -77,9 +77,9 @@ function Header() {
               </div>
             </div>
 
-            <div className="lg:border-r lg:border-r-[#e9edf5] lg:border-b-none border-b-[#e9edf5] p-6">
+            <div className="lg:border-r lg:border-r-[#e9edf5] border-b-[#e9edf5] border-b lg:border-b-0 p-6 w-full lg:w-auto">
               <div
-                className="flex items-center gap-2 rounded-lg w-full sm:w-auto cursor-pointer"
+                className="flex items-center  gap-2 rounded-lg w-full sm:w-auto cursor-pointer"
                 onClick={handleDateClick}
               >
                 <img src="/date.svg" className="w-[25px]" />
@@ -89,9 +89,9 @@ function Header() {
               </div>
             </div>
 
-            <div className="p-6">
+            <div className="p-6 w-full lg:w-auto ">
               <div
-                className="relative rounded-lg flex items-center p-2 cursor-pointer"
+                className="relative rounded-lg flex items-center lg:px-2 cursor-pointer"
                 onClick={handleGuestClick}
               >
                 <img src="/user-icon.svg" className="w-[25px]" />

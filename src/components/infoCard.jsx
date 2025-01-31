@@ -1,15 +1,18 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css"; 
 import Wrapper from "../layout/wrapper";
+import { Pagination } from "swiper/modules";
 
 function InfoCard() {
   return (
     <>
-      <div className="relative bg-[#F4F5F7] py-[40px] lg:p-10 ">
+      <div className="relative bg-[#F4F5F7] pt-[40px] lg:p-10 ">
         <Wrapper>
           <Swiper
             spaceBetween={20}
             slidesPerView="auto"
+            pagination
+            modules={[Pagination]}
             breakpoints={{
               640: {
                 slidesPerView: 1,
@@ -23,7 +26,7 @@ function InfoCard() {
             }}
           >
             <SwiperSlide>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 mb-[50px] lg:mb-0">
                 <img
                   src="/location-card.svg"
                   alt="Location Card"
@@ -41,7 +44,7 @@ function InfoCard() {
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 mb-[50px] lg:mb-0">
                 <img
                   src="/shine.svg"
                   alt="Winter Destinations"
@@ -59,7 +62,7 @@ function InfoCard() {
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 mb-[50px] lg:mb-0">
                 <img
                   src="/face.svg"
                   alt="Happy Travelers"
