@@ -31,7 +31,8 @@ function Header() {
     setShowGuestPicker(!showGuestPicker);
   };
 
-  const handleApplyGuests = () => {
+  const handleApplyGuests = (e) => {
+    e.preventDefault()
     setTotalGuests(adults + youth + children);
     setShowGuestPicker(false);
   };
