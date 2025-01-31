@@ -7,6 +7,7 @@ import StylingPlaces from "./components/stylingPlaces";
 import TrandingEvent from "./components/trandingEvent";
 import OurTraveler from "./components/ourTraveler";
 import Contact from "./components/contact";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <TrandingEvent />
       <OurTraveler />
       <Contact />
+      <Footer />
     </>
   );
 }
