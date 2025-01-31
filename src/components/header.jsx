@@ -13,6 +13,11 @@ function Header() {
   const [children, setChildren] = useState(0);
   const [showGuestPicker, setShowGuestPicker] = useState(false);
   const [totalGuests, setTotalGuests] = useState(0);
+  const [showLocation, setShowLocation] = useState(false);
+
+  const handleLocationClick = () => {
+    setShowLocation(!showLocation);
+  };
 
   const handleDateClick = () => {
     setShowDatePicker(!showDatePicker);
@@ -32,7 +37,7 @@ function Header() {
   };
 
   const handleApplyGuests = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     setTotalGuests(adults + youth + children);
     setShowGuestPicker(false);
   };
@@ -51,16 +56,34 @@ function Header() {
           </p>
 
           <form className="relative mt-8 bg-white rounded-lg shadow-lg flex gap-4 items-center justify-between flex-col lg:flex-row w-full lg:w-auto">
-            <div className="lg:border-r lg:border-r-[#e9edf5] p-6 border-b-[#e9edf5] border-b lg:border-b-0 w-full lg:w-auto">
-              <div className="flex items-center gap-2 rounded-lg lg:px-2 w-full sm:w-auto">
-                <img src="/location.svg" className="w-[25px]" />
-                <select className="bg-transparent focus:outline-none">
-                  <option>All Destinations</option>
-                  <option>Amsterdam</option>
-                  <option>London</option>
-                  <option>New York</option>
-                  <option>Paris</option>
-                </select>
+            <div className="lg:border-r lg:border-r-[#e9edf5] p-6 border-b-[#e9edf5] border-b lg:border-b-0 w-full lg:w-auto relative">
+              <div className="flex items-center gap-2 rounded-lg  lg:px-2 w-full sm:w-auto">
+                <div
+                  className="flex items-center gap-2 cursor-pointer select-none"
+                  onClick={handleLocationClick}
+                >
+                  <img src="/location.svg" className="w-[25px]" />
+                  <span>All Destinations</span>
+                </div>
+
+                <div
+                  className={`absolute bg-white top-[100%] mt-2 left-0 p-2 w-full lg:max-w-[230px]  overflow-y-scroll h-[150px] ease-in transition-transform ${
+                    showLocation ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[100%]"
+                  }`}
+                >
+                  <div className="p-3 border-b border-b-[#e9edf5] cursor-pointer hover:text-[#ff5722] transition-all ease-in">
+                    Amsterdam
+                  </div>
+                  <div className="p-3 border-b border-b-[#e9edf5] cursor-pointer hover:text-[#ff5722] transition-all ease-in">
+                    London
+                  </div>
+                  <div className="p-3 border-b border-b-[#e9edf5] cursor-pointer hover:text-[#ff5722] transition-all ease-in">
+                    New York
+                  </div>
+                  <div className="p-3 cursor-pointer hover:text-[#ff5722] transition-all ease-in">
+                    Paris
+                  </div>
+                </div>
               </div>
             </div>
 
