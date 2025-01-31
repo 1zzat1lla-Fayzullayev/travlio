@@ -24,10 +24,11 @@ const TravelCard = ({
 
   return (
     <div className="relative w-full mb-8">
-      <div className="overflow-hidden">
+      <div className="overflow-hidden rounded-[10px]">
+        {" "}
         <img
           src={img}
-          className="w-full transition-all ease-in object-cover hover:scale-105 transform rounded-[10px] hover:rounded-[10px]"
+          className="w-full transition-all ease-in object-cover hover:scale-105 transform rounded-[10px]"
           alt={title}
         />
       </div>
@@ -44,7 +45,9 @@ const TravelCard = ({
             </h4>
             <div className="flex items-center gap-2">
               <img src="/location.svg" className="w-[15px]" alt="Location" />
-              <span className="text-gray-600 text-[14px] md:text-[16px]">{location}</span>
+              <span className="text-gray-600 text-[14px] md:text-[16px]">
+                {location}
+              </span>
             </div>
           </div>
           <div className="flex flex-col items-end">
@@ -121,8 +124,12 @@ function PopularTravel() {
     <>
       <Wrapper>
         <div className="text-center mb-8 relative mt-[100px]">
-          <p className=" text-[#2C3F58] lora text-[17px] md:text-[20px]">Popular Travel Packages</p>
-          <h2 className="text-[25px] md:text-[30px] lg:text-[50px] font-bold text-[#2C3F58]">Top Cities for Travel</h2>
+          <p className=" text-[#2C3F58] lora text-[17px] md:text-[20px]">
+            Popular Travel Packages
+          </p>
+          <h2 className="text-[25px] md:text-[30px] lg:text-[50px] font-bold text-[#2C3F58]">
+            Top Cities for Travel
+          </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {travelData.map((item, index) => (

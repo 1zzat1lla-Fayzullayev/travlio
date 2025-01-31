@@ -4,6 +4,7 @@ import Wrapper from "../layout/wrapper";
 function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [activeLink, setActiveLink] = useState(null); // Active linkni kuzatish
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen((prev) => !prev);
@@ -11,6 +12,10 @@ function Navbar() {
 
   const toggleDropdown = (menu) => {
     setActiveDropdown((prev) => (prev === menu ? null : menu));
+  };
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link); // Linkni bosilganda active qilish
   };
 
   const menuItems = [
@@ -38,15 +43,20 @@ function Navbar() {
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
                   <button
-                    className="transition-all duration-300 hover:text-[#ff5722] cursor-pointer"
+                    className={`transition-all duration-300 ${
+                      activeLink === menu.name
+                        ? "text-[#ff5722] font-semibold"
+                        : "hover:text-[#ff5722]"
+                    }`}
                     aria-expanded={activeDropdown === menu.name}
+                    onClick={() => handleLinkClick(menu.name)}
                   >
                     {menu.name}
                     <b className="caret"></b>
                   </button>
                   {/* Dropdown */}
                   <div
-                    className={`absolute top-[50px] left-0 w-[200px] bg-white shadow-lg transition-all duration-300 px-4 ease-in-out ${
+                    className={`absolute top-[50px] left-0 w-[200px] bg-white shadow-lg transition-all duration-300 px-4 ease-in-out dropdown-menu ${
                       activeDropdown === menu.name
                         ? "opacity-100 visible translate-y-0"
                         : "opacity-0 invisible -translate-y-3"
@@ -67,7 +77,12 @@ function Navbar() {
               {staticLinks.map((menu, index) => (
                 <li
                   key={index}
-                  className="transition-all duration-300 cursor-pointer hover:text-[#ff5722]"
+                  className={`transition-all duration-300 cursor-pointer ${
+                    activeLink === menu
+                      ? "text-[#ff5722] font-semibold"
+                      : "hover:text-[#ff5722]"
+                  }`}
+                  onClick={() => handleLinkClick(menu)}
                 >
                   {menu}
                 </li>
@@ -118,8 +133,15 @@ function Navbar() {
               {menuItems.map((menu, index) => (
                 <li key={index} className="mb-4">
                   <button
-                    onClick={() => toggleDropdown(menu.name)}
-                    className="block transition-all duration-300 hover:text-[#ff5722] cursor-pointer focus:outline-none w-full text-left"
+                    onClick={() => {
+                      toggleDropdown(menu.name);
+                      handleLinkClick(menu.name);
+                    }}
+                    className={`block transition-all duration-300 ${
+                      activeLink === menu.name
+                        ? "text-[#ff5722] font-semibold"
+                        : "hover:text-[#ff5722]"
+                    } cursor-pointer focus:outline-none w-full text-left`}
                   >
                     {menu.name}
                     <b className="caret"></b>
@@ -142,7 +164,12 @@ function Navbar() {
               {staticLinks.map((menu, index) => (
                 <li
                   key={index}
-                  className="mb-4 transition-all duration-300 hover:text-[#ff5722] cursor-pointer"
+                  className={`mb-4 transition-all duration-300 ${
+                    activeLink === menu
+                      ? "text-[#ff5722] font-semibold"
+                      : "hover:text-[#ff5722]"
+                  } cursor-pointer`}
+                  onClick={() => handleLinkClick(menu)}
                 >
                   {menu}
                 </li>
